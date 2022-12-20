@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="../../style/main-style.css">
+    <link rel="stylesheet" href="../../style/table-style.css">
+</head>
+
+<body>
+    <main class="main">
+        <nav class="nav">
+            <div style="margin: 0 0 40px 12px;" class="logo-title">django</div>
+            <div class="nav-block__main">
+                <img src="./images/tasks.svg" alt="tasks" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item2', 'arrow2')">
+                        <a href="#">Панель управления ботами</a>
+                        <img class="arrow" id="arrow2" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item2">
+                        <a href="../knowledge/index.html">Базы знаний</a>
+                        <a href="../bots/index.html">Боты</a>
+                        <a href="../history/index.html">Истории сообщений</a>
+                        <a href="../profile/index.html">Профили пользователей</a>
+                        <a href="../phrases/index.html">Фразы для добавления в базу знаний</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main">
+                <img src="./images/community.svg" alt="community" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item3', 'arrow3')">
+                        <a href="#">Группы и пользователи</a>
+                        <img class="arrow" id="arrow3" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item3">
+                        <a href="../groups/index.html">Группы</a>
+                        <a href="../users/index.html">Пользователи</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main media del-media">
+                <img src="./images/settings.svg" onclick="Menu()" alt="settings">
+                <div class="nav-block">
+                    <div class="subnav-block">
+                        <a href="#">Настройки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main media del-media">
+                <img src="./images/login.svg" onclick="Menu()" alt="login">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item4', 'arrow4')">
+                        <a href="#">Аутентификация</a>
+                        <img src="./images/arrow.svg" class="arrow" id="arrow4" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item4">
+                        <a href="../log in/index.html">Войти</a>
+                        <a href="#">Регистрация</a>
+                        <a href="#">Сброс пароля</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main">
+                <img src="./images/admin.svg" alt="admin" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item1', 'arrow1')">
+                        <a href="#">Интерфейс админа</a>
+                        <img class="arrow" id="arrow1" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item1">
+                        <a href="../../index.html">Темы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-arrow__block">
+                <button onclick="Menu()" id="main-arrow"></button>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="header-block">
+                <img src="./images/search.svg" alt="search">
+                <img src="./images/message.svg" alt="message">
+                <img src="./images/information.svg" alt="information">
+                <div class="profile add-media">
+                    <div class="profile-block" onclick="tog('item5', 'arrow5')">
+                        <img style="margin-right: 8px;" src="./images/home.svg" alt="home">
+                        <p class="logo-title">django</p>
+                        <img class="arrow" id="arrow5" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="profile-list" id="item5">
+                        <p class="logo-title">django</p>
+                        <i>Администратор</i>
+                        <a href="#">Настройки</a>
+                        <a href="../../pages/log in/index.html">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-block">
+            <div class="content-block">
+                <div class="content-block__header">
+                    <div class="content-header__top">
+                        <h1 class="main-title">История сообщений ✨</h1>
+                        <div class="create-block">
+                            <form>
+                                <img src="./images/search.svg" alt="search">
+                                <input type="text" placeholder="Найти">
+                            </form>
+                            <a class="add-btn" href="../history-add/index.html">
+                                <img src="./images/add.svg" alt="add">
+                                Добавить историю сообщений
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-header__bottom"></div>
+                </div>
+                <div class="section">
+                    <div class="content-header">История сообщений <span>31</span></div>
+                    <div class="section-block">
+                        <div class="content-titles">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">ID</div>
+                            <div class="w15">дата сообщения</div>
+                            <div class="w10">источник сообщения (соц.сеть)</div>
+                            <div class="w10">имя бота</div>
+                            <div class="w10">ID пользователя в соц.сети</div>
+                            <div class="w10">никнейм пользователя</div>
+                            <div class="w5">кто задал вопрос</div>
+                            <div class="w10">вопрос</div>
+                            <div class="w15">ответ</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">625</div>
+                            <div class="w15">19 декабря 2022 г. 7:01</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">829862616</div>
+                            <div class="w10">hostelmen</div>
+                            <div class="w5">User</div>
+                            <div class="w10">привет</div>
+                            <div class="w15">горячо приветствую</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">624</div>
+                            <div class="w15">18 декабря 2022 г. 19:07</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">829862616</div>
+                            <div class="w10">hostelmen</div>
+                            <div class="w5">User</div>
+                            <div class="w10">привет</div>
+                            <div class="w15">горячо приветствую</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">623</div>
+                            <div class="w15">18 декабря 2022 г. 18:22</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">391871714</div>
+                            <div class="w10">BeeCoding</div>
+                            <div class="w5">Bot</div>
+                            <div class="w10">Ваш возраст?</div>
+                            <div class="w15">37</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">622</div>
+                            <div class="w15">18 декабря 2022 г. 18:22</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">391871714</div>
+                            <div class="w10">BeeCoding</div>
+                            <div class="w5">Bot</div>
+                            <div class="w10">как Ваше имя?</div>
+                            <div class="w15">эдуард</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">621</div>
+                            <div class="w15">18 декабря 2022 г. 18:21</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">391871714</div>
+                            <div class="w10">BeeCoding</div>
+                            <div class="w5">User</div>
+                            <div class="w10">в тебя?</div>
+                            <div class="w15">не понял, можешь уточнить?</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">620</div>
+                            <div class="w15">18 декабря 2022 г. 18:21</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">391871714</div>
+                            <div class="w10">BeeCoding</div>
+                            <div class="w5">User</div>
+                            <div class="w10">привет</div>
+                            <div class="w15">привет</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">619</div>
+                            <div class="w15">18 декабря 2022 г. 18:20</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">102725468</div>
+                            <div class="w10">ahilwanksta</div>
+                            <div class="w5">User</div>
+                            <div class="w10">программа питания</div>
+                            <div class="w15">не совсем понятно, что ты имеешь ввиду</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">618</div>
+                            <div class="w15">18 декабря 2022 г. 18:20</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">102725468</div>
+                            <div class="w10">ahilwanksta</div>
+                            <div class="w5">User</div>
+                            <div class="w10">что расскажешь</div>
+                            <div class="w15">что ты имеешь ввиду?</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">619</div>
+                            <div class="w15">18 декабря 2022 г. 18:20</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">102725468</div>
+                            <div class="w10">ahilwanksta</div>
+                            <div class="w5">User</div>
+                            <div class="w10">привет</div>
+                            <div class="w15">доброго времени суток</div>
+                        </div>
+                        <div class="subaction">
+                            <input class="w10" type="checkbox" name="" id="">
+                            <div class="w5">618</div>
+                            <div class="w15">18 декабря 2022 г. 16:24</div>
+                            <div class="w10">telegram</div>
+                            <div class="w10">PetiaAIBot</div>
+                            <div class="w10">829862616</div>
+                            <div class="w10">hostelmen</div>
+                            <div class="w5">User</div>
+                            <div class="w10">че ты?</div>
+                            <div class="w15">попробуй написать по другому</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

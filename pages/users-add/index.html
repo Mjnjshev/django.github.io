@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users-add</title>
+    <link rel="stylesheet" href="../../style/table-style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../style/main-style.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav class="nav">
+            <div style="margin: 0 0 40px 12px;" class="logo-title">django</div>
+            <div class="nav-block__main">
+                <img src="./images/tasks.svg" alt="tasks" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item2', 'arrow2')">
+                        <a href="#">Панель управления ботами</a>
+                        <img class="arrow" id="arrow2" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item2">
+                        <a href="../knowledge/index.html">Базы знаний</a>
+                        <a href="../bots/index.html">Боты</a>
+                        <a href="../history/index.html">Истории сообщений</a>
+                        <a href="../profile/index.html">Профили пользователей</a>
+                        <a href="../phrases/index.html">Фразы для добавления в базу знаний</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main">
+                <img src="./images/community.svg" alt="community" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item3', 'arrow3')">
+                        <a href="#">Группы и пользователи</a>
+                        <img class="arrow" id="arrow3" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item3">
+                        <a href="../groups/index.html">Группы</a>
+                        <a href="../users/index.html">Пользователи</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main media del-media">
+                <img src="./images/settings.svg" onclick="Menu()" alt="settings">
+                <div class="nav-block">
+                    <div class="subnav-block">
+                        <a href="#">Настройки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main media del-media">
+                <img src="./images/login.svg" onclick="Menu()" alt="login">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item4', 'arrow4')">
+                        <a href="#">Аутентификация</a>
+                        <img src="./images/arrow.svg" class="arrow" id="arrow4" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item4">
+                        <a href="#">Войти</a>
+                        <a href="#">Регистрация</a>
+                        <a href="#">Сброс пароля</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main">
+                <img src="./images/admin.svg" alt="admin" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item1', 'arrow1')">
+                        <a href="#">Интерфейс админа</a>
+                        <img class="arrow" id="arrow1" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item1">
+                        <a href="../../index.html">Темы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-arrow__block">
+                <button onclick="Menu()" id="main-arrow"></button>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="header-block">
+                <img src="./images/search.svg" alt="search">
+                <img src="./images/message.svg" alt="message">
+                <img src="./images/information.svg" alt="information">
+                <div class="profile add-media">
+                    <div class="profile-block" onclick="tog('item5', 'arrow5')">
+                        <img style="margin-right: 8px;" src="./images/home.svg" alt="home">
+                        <p class="logo-title">django</p>
+                        <img class="arrow" id="arrow5" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="profile-list" id="item5">
+                        <p class="logo-title">django</p>
+                        <i>Администратор</i>
+                        <a href="#">Настройки</a>
+                        <a href="../../pages/log in/index.html">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-block">
+            <div class="content-block">
+                <div class="content-header__top">
+                    <h1 class="main-title">Добавить пользователя ✨</h1>
+                </div>
+                <div class="section">
+                    <p class="rules-title">Сначала введите имя пользователя и пароль. Затем вы сможете ввести больше
+                        информации о пользователе.</p>
+                    <div class="user-add__logo">
+                        <img src="./images/home.svg" alt="logo">
+                        <a href="#" class="add-btn">
+                            <img src="./images/add.svg" alt="add">
+                            Изменить
+                        </a>
+                    </div>
+                    <div class="user-add__params">
+                        <h2>Имя пользователя</h2>
+                        <p>Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_.</p>
+                        <form>
+                            <label for="name"><p>Имя</p></label>
+                            <input type="text" name="" id="name" placeholder="">
+                        </form>
+                    </div>
+                    <div class="user-add__params">
+                        <h2>Пароль</h2>
+                        <p>Пароль не должен быть слишком похож на другую вашу личную информацию.
+                            Ваш пароль должен содержать как минимум 8 символов.
+                            Пароль не должен быть слишком простым и распространенным.
+                            Пароль не может состоять только из цифр.</p>
+                        <form>
+                            <label for="name"><p>Пароль</p></label>
+                            <input type="password" name="" id="name" placeholder="">
+                        </form>
+                    </div>
+                    <div class="user-add__params">
+                        <h2>Подтверждение пароля</h2>
+                        <p>
+                            Для подтверждения введите, пожалуйста, пароль ещё раз.</p>
+                        <form>
+                            <label for="name"><p>Пароль</p></label>
+                            <input type="password" name="" id="name" placeholder="">
+                        </form>
+                    </div>
+                    <div class="user-add__save">
+                        <a href="#" class="add-btn">Сохранить и добавить другой объект</a>
+                        <a href="#" class="add-btn">Сохранить и продолжить редактирование</a>
+                        <a href="#" class="add-btn">СОХРАНИТЬ</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./style/main-style.css">
+    <link rel="stylesheet" href="./style/table-style.css">
+</head>
+
+<body>
+    <main class="main">
+        <nav class="nav">
+            <div style="margin: 0 0 40px 12px;" class="logo-title">django</div>
+            <div class="nav-block__main">
+                <img src="./images/tasks.svg" alt="tasks" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item2', 'arrow2')">
+                        <a href="#">Панель управления ботами</a>
+                        <img class="arrow" id="arrow2" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item2">
+                        <a href="./pages/knowledge/index.html">Базы знаний</a>
+                        <a href="./pages/bots/index.html">Боты</a>
+                        <a href="./pages/history/index.html">Истории сообщений</a>
+                        <a href="./pages/profile/index.html">Профили пользователей</a>
+                        <a href="./pages/phrases/index.html">Фразы для добавления в базу знаний</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main">
+                <img src="./images/community.svg" alt="community" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item3', 'arrow3')">
+                        <a href="#">Группы и пользователи</a>
+                        <img class="arrow" id="arrow3" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item3">
+                        <a href="./pages/groups/index.html">Группы</a>
+                        <a href="./pages/users/index.html">Пользователи</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main media del-media">
+                <img src="./images/settings.svg" onclick="Menu()" alt="settings">
+                <div class="nav-block">
+                    <div class="subnav-block">
+                        <a href="#">Настройки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main media del-media">
+                <img src="./images/login.svg" onclick="Menu()" alt="login">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item4', 'arrow4')">
+                        <a href="#">Аутентификация</a>
+                        <img src="./images/arrow.svg" class="arrow" id="arrow4" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item4">
+                        <a href="#">Войти</a>
+                        <a href="#">Регистрация</a>
+                        <a href="#">Сброс пароля</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-block__main">
+                <img src="./images/admin.svg" alt="admin" onclick="Menu()">
+                <div class="nav-block">
+                    <div class="subnav-block" onclick="tog('item1', 'arrow1')">
+                        <a href="#">Интерфейс админа</a>
+                        <img class="arrow" id="arrow1" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="subblock" id="item1">
+                        <a href="./index.html">Темы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-arrow__block">
+                <button onclick="Menu()" id="main-arrow"></button>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="header-block">
+                <img src="./images/search.svg" alt="search">
+                <img src="./images/message.svg" alt="message">
+                <img src="./images/information.svg" alt="information">
+                <div class="profile add-media">
+                    <div class="profile-block" onclick="tog('item5', 'arrow5')">
+                        <img style="margin-right: 8px;" src="./images/home.svg" alt="home">
+                        <p class="logo-title">django</p>
+                        <img class="arrow" id="arrow5" src="./images/arrow.svg" alt="arrow">
+                    </div>
+                    <div class="profile-list" id="item5">
+                        <p class="logo-title">django</p>
+                        <i>Администратор</i>
+                        <a href="#">Настройки</a>
+                        <a href="./pages/log in/index.html">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main-block">
+            <div class="content-block">
+                <div class="content-block__header">
+                    <div class="content-header__top">
+                        <h1 class="main-title">Последние действия ✨</h1>
+                        <div class="create-block">
+                            <form>
+                                <img src="./images/search.svg" alt="search">
+                                <input type="text" placeholder="Найти">
+                            </form>
+                            <a href="#" class="add-btn">
+                                <img src="./images/add.svg" alt="add">
+                                Создать действие
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-header__bottom">
+                        <a class="button" href="#">
+                            <h3>Все</h3>
+                            <p>15</p>
+                        </a>
+                        <a class="button" href="#">
+                            <h3>Новые</h3>
+                            <p>8</p>
+                        </a>
+                        <a class="button" href="#">
+                            <h3>Старые</h3>
+                            <p>7</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="content-header">Действия <span>15</span></div>
+                    <div class="content-titles">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15">Номер №</div>
+                        <div class="w15">Название</div>
+                        <div class="w15">Статус</div>
+
+                        <div class="w15">Категория</div>
+                        <div class="w15">Дата</div>
+                        <div class="w15">Действие</div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143567</div>
+                        <div class="w15">Django</div>
+                        <div class="w15"><a class="warn" href="#">На стадии</a></div>
+
+                        <div class="w15">Theme</div>
+                        <div class="w15">22/07/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143536</div>
+                        <div class="w15">Bootstrap</div>
+                        <div class="w15"><a class="warn" href="#">На стадии</a></div>
+
+                        <div class="w15">Theme</div>
+                        <div class="w15">25/07/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143536</div>
+                        <div class="w15">Bootstrap</div>
+                        <div class="w15"><a class="warn" href="#">На стадии</a></div>
+
+                        <div class="w15">Theme</div>
+                        <div class="w15">22/07/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction"><input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143567</div>
+                        <div class="w15">USWDS</div>
+                        <div class="w15"><a class="warn" href="#">На стадии</a></div>
+
+                        <div class="w15">Theme</div>
+                        <div class="w15">06/08/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143535</div>
+                        <div class="w15">Хуйло</div>
+                        <div class="w15"><a class="done" href="#">Завершен</a></div>
+
+                        <div class="w15">Theme</div>
+                        <div class="w15">06/08/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143523</div>
+                        <div class="w15">VasyaAIChatBot</div>
+                        <div class="w15"><a class="error" href="#">Ошибка</a></div>
+
+                        <div class="w15">Бота</div>
+                        <div class="w15">10/08/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143588</div>
+                        <div class="w15">Bootstrap</div>
+                        <div class="w15"><a class="warn" href="#">На стадии</a></div>
+
+                        <div class="w15">Theme</div>
+                        <div class="w15">25/07/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143542</div>
+                        <div class="w15">Test</div>
+                        <div class="w15"><a class="done" href="#">Завершен</a></div>
+
+                        <div class="w15">Группа</div>
+                        <div class="w15">11/08/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143511</div>
+                        <div class="w15">Ветка базы знаний</div>
+                        <div class="w15"><a class="error" href="#">Ошибка</a></div>
+
+                        <div class="w15">Базу знаний</div>
+                        <div class="w15">10/08/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                    <div class="subaction">
+                        <input class="w10" type="checkbox" name="" id="">
+                        <div class="w15 number">#143509</div>
+                        <div class="w15">Ветка базы знаний</div>
+                        <div class="w15"><a class="warn" href="#">На стадии</a></div>
+
+                        <div class="w15">Theme</div>
+                        <div class="w15">29/07/2021</div>
+                        <div class="w15">
+                            <a href="#"><img src="./images/change.svg" alt="change"></a>
+                            <a href="#"><img src="./images/install.svg" alt="install"></a>
+                            <a href="#"><img src="./images/delete.svg" alt="delete"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

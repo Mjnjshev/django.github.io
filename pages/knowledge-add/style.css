@@ -1,0 +1,71 @@
+.section{
+    background-color: transparent !important;
+}
+.rules-title{
+    margin-top: 32px;
+    color: #475569;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    line-height: 24px;
+}
+.user-add__logo{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+}
+.user-add__logo > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.user-add__params{
+    margin-top: 24px;
+}
+.user-add__params h2{
+    color: #1e293b;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 27.5px;
+}
+.user-add__params p{
+    margin-top: 4px;
+    color: #475569;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    line-height: 22px;
+}
+.user-add__params form{
+    margin-top: 20px;
+}
+.user-add__params form label{
+    display: block;
+}
+.user-add__params form label p{
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.user-add__params form input{
+    padding: 8px 12px;
+    width: 235px;
+    border-radius: 3px;
+    border: 1px solid rgb(226, 232, 240);
+    color: rgb(30, 41, 59x);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+.user-add__save{
+    flex-wrap: wrap;
+    margin-top: 24px;
+    display: flex;
+    gap: 10px 10px;
+}
+textarea{
+    border: none;
+}
+@media(max-width: 520px){   
+    .textarea{
+        width: 235px;
+    }
+}

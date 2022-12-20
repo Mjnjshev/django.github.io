@@ -1,0 +1,109 @@
+.section{
+    background-color: transparent !important;
+}
+.rules-title{
+    margin-top: 32px;
+    color: #475569;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    line-height: 24px;
+}
+.user-add__logo{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+}
+.user-add__logo > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.user-add__params{
+    margin-top: 24px;
+}
+.user-add__params h2{
+    color: #1e293b;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 27.5px;
+}
+.user-add__params p{
+    margin-top: 4px;
+    color: #475569;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    line-height: 22px;
+}
+.user-add__params form{
+    margin-top: 20px;
+}
+.user-add__params form label{
+    display: block;
+}
+.user-add__params form label p{
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.user-add__params form input{
+    padding: 8px 12px;
+    width: 235px;
+    border-radius: 3px;
+    border: 1px solid rgb(226, 232, 240);
+    color: rgb(30, 41, 59x);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+.rights-block{
+    display: flex;
+    gap: 20px 40px;
+    margin-top: 10px;
+}
+.rights{
+    background-color: #ffffff;
+    border-radius: 3px;
+    width: 380px;
+}
+.rights h3{
+    color: rgb(71, 85, 105);
+    border-bottom: 1px solid rgb(226, 232, 240);
+    border-radius: 3px 3px 0 0;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+.select{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    overflow: auto;
+    height: 270px;
+}
+.select a{
+    color: rgb(71, 85, 105);
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    line-height: 22px;
+}
+.select::-webkit-scrollbar{
+    display: none;
+}
+.user-add__save{
+    flex-wrap: wrap;
+    margin-top: 24px;
+    display: flex;
+    gap: 10px 10px;
+}
+@media(max-width: 768px){
+    .rights-block{
+        flex-direction: column;
+    }
+}
+@media(max-width: 525px){
+    .rights{
+        width: 100%;
+    }
+}

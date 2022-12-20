@@ -1,0 +1,141 @@
+a{
+    margin: 0;
+}
+.main{
+    display: flex;
+    height: 100vh;
+}
+.form-block{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-title{
+    position: absolute;
+    color: rgb(30, 41, 59);
+    left: 40px;
+    top: 10px;
+    
+}
+.form{
+    width: 350px;
+    height: 350px;
+}
+label{
+    font-size: 14px;
+    display: block;
+    margin: 16px 0 4px;
+    font-weight: 500;
+    color: #475569;
+    font-family: 'Inter', sans-serif;
+}
+input{
+    padding: 8px 12px;
+    width: 100%;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid rgb(226, 232, 240);
+    font-size: 14px;
+}
+.sign-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+.forget-password{
+    color: #475569;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.sign-in{
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #6366f1;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 3px;
+}
+.description {
+    margin-top: 20px;
+    display: flex;
+    color: #475569;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+.description a{
+    margin-left: 5px;
+    color: #6366f1;
+}
+
+.img-block{
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/auth-image.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.arrow{
+    width: 218px;
+    height: 224px;
+    position: absolute;
+    background-image: url(./images/arrow.png);
+    background-size: cover;
+    background-position: center;
+    top: 200px;
+    left: -70px;
+}
+
+@media(max-width: 768px){
+    .main{
+        flex-direction: column;
+        height: 100%;
+    }
+    .form-block{
+        width: 100%;
+        height: 550px;
+    }
+    .img-block{
+        width: 100%;
+        height: 400px;
+        background-position: 10% 20%;
+    }
+    .arrow{
+        top: -15%;
+        left: 70%;
+    }
+}
+
+@media (max-width: 425px){
+    .arrow{
+        width: 145px;
+        height: 150px;
+        transform: rotate(90deg);
+        left: 0;
+    }
+}
+
+@media(max-width: 375px){
+    .form{
+        width: 300px;
+    }
+}
+
+@media(max-width: 320px){
+    .form-block{
+        height: 600px;
+    }
+    .form{
+        width: 250px;
+    }
+    .arrow{
+        top: -10%;
+        left: -5%;
+    }
+}

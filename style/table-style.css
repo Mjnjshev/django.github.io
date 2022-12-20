@@ -1,0 +1,147 @@
+.content-titles div {
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(100, 116, 139);
+}
+.content-header span {
+    color: #94a3b8;
+    font-weight: 500;
+}
+.subaction div {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.warn {
+    background-color: rgb(254, 243, 199);
+    color: rgb(217, 119, 6);
+    padding: 6px 12px;
+    border-radius: 70px;
+}
+
+.done {
+    background-color: rgb(209, 250, 229);
+    color: rgb(5, 150, 105);
+    padding: 6px 12px;
+    border-radius: 70px;
+}
+
+.error {
+    background-color: rgb(255, 228, 230);
+    color: rgb(244, 63, 94);
+    padding: 6px 12px;
+    border-radius: 70px;
+}
+
+.number {
+    color: rgb(14, 165, 233);
+}
+
+.w5 {
+    width: 5%;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w15 {
+    width: 15%;
+    color: rgb(30, 41, 59);
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w90 {
+    width: 90%;
+}
+
+.content-titles {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border: 1px solid rgb(226, 232, 240);
+}
+.content-header {
+    padding: 16px 20px;
+    color: #1e293b;
+    border: 1px solid rgb(226, 232, 240);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.subaction {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border: 1px solid rgb(226, 232, 240);
+}
+@media(max-width: 2560px){
+    .content-titles{
+        width: 2418px;
+    }
+    .content-header{
+        width: 2418px;
+    }
+    .subaction{
+        width: 2418px;
+    }
+    .section-block{
+        width: 2418px;
+    }
+}
+@media(max-width: 1440px){
+    .content-titles{
+        width: 1298px;
+    }
+    .content-header{
+        width: 1298px;
+    }
+    .subaction{
+        width: 1298px;
+    }
+    .section-block{
+        width: 1298px;
+    }
+}
+@media(max-width: 1024px){
+    .content-titles{
+        width: 900px;
+    }
+    .content-header{
+        width: 900px;
+    }
+    .subaction{
+        width: 900px;
+    }
+    .section-block{
+        width: 900px;
+    }
+}
+@media(max-width: 1024px) {
+    .content-header__top {
+        flex-direction: column;
+        gap: 10px 0;
+    }
+}
